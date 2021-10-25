@@ -4,14 +4,12 @@ form.setAttribute('autocomplete', 'current-password');
 form.addEventListener('submit', (event) => {
     event.preventDefault();
 
-    const {
-        elements: { email, password }
-    } = event.currentTarget;
+     const {elements: { email, password }} = event.currentTarget;    
 
     if (email.value === "" || password.value === "") {
         alert("Please fill in all the fields!");
     }
 
-    console.log(`Email: ${email.value}, Password: ${password.value}`);
+    console.log(event.currentTarget);
     event.currentTarget.reset();
-});
+})
